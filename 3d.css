@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100px;
+    background: linear-gradient(90deg, 
+    rgba(118, 113, 191, 1) 0%,
+    rgba(21,21,92, 1)50%,
+    rgba(118, 113, 191, 1)100%);
+}
+.container{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.can{
+    position: absolute;
+    left: 23%;
+    transform: rotateX(-50%);
+    bottom: 10px;
+    z-index: 2;
+    width: 500px;
+    height: 600px;
+    transition: .7s;
+    --left: 23px;
+    display: flex;
+}
+.can .pack{
+    position: absolute;
+    background: var(--bg) var(--left), url(mockup.png);
+    background-size: auto 100%;
+    width: 280px;
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(mockup.png);
+    mask-size: auto 100%;
+    left: 50%;
+    transform: rotateX(-50%);
+    transition: .7s;
+}
+.container .can:hover{
+    --left: -1000px;
+    transform: rotateX(-50%) translateY(-20%);
+}
+.can .pack:nth-child(2){
+    opacity: 1;
+}
+.can .pack:hover:nth-child(2){
+    opacity: 0;
+}
+
