@@ -1,0 +1,523 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #355463;
+    overflow: hidden;
+}
+.road{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 1440px;
+transform-style: preserve-3d;
+transform:rotate(-15deg);
+}
+.road::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #fff, #fff 50%, transparent);
+     background-size: 50px;
+     animation: road 0.12s linear infinite;
+}
+@keyframes road{
+    0%{
+        background-position: 50px 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.police{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 300px;
+    background: #3f4c54;
+    border-radius: 10px;
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    perspective: 800px;
+    z-index: 10;
+    animation: policecar 5s linear infinite;
+}
+@keyframes policecar{
+    0%{
+        transform: translateX(-20px) translateY(50px);
+    }
+    25%{
+        transform: translateX(10px) translateY(0px);
+    }
+    50%{
+        transform: translateX(-20px) translateY(-50px);
+    }
+    75%{
+        transform: translateX(10px) translateY(0);
+    }
+    100%{
+        transform: translateX(-20px) translateY(50px);
+    }
+}
+.police::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 2px;
+    height: 15px;
+    border-radius: 2px;
+    background: #fc325f;
+    box-shadow: 0 42px #fc325f;
+}
+.police::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    /* left: 2px; */
+    right: 2px;
+    width: 2px;
+    height: 16px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 44px #fff;   
+}
+.police span{
+    position: absolute;
+    background: #475b66;
+    border-radius: 10px;
+    inset: 5px 10px;
+    overflow: hidden;
+
+}
+.police span::before{
+    content: "911";
+    top: 50%;
+    position: absolute;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    color: #333;
+    font-size: 17.92px;
+    font-weight: 1000;
+    letter-spacing: 1.6px;
+    z-index: 10;
+}
+.police span::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 6px;
+    height: 10px;
+    background: #29282b;
+    box-shadow: 0px -10px #1f5ff1, 0px 10px #df1b25;
+    /* color: ; */
+}
+.police span b{
+    position: absolute;
+    inset: 0 30px;
+    background: #344650;
+    border-radius: 10px;
+}
+.police span b::before{
+   content: "";
+   position: absolute;
+   inset: 6px 25px;
+   background: #ebebeb; 
+}
+.police span b::after{
+    inset: 0px 58px;
+    content: "";
+   position: absolute;
+    background: #ebebeb;
+}
+.police span i{
+    inset: 0;
+    position: absolute;
+
+}
+.police span i::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #ebebeb;
+    transform-origin:right ;
+    transform: rotate(15deg);
+    box-shadow: 100px 34px #ebebeb;
+}
+.police span i::after{
+    content: "";
+    position: absolute;
+    /* top: 7px; */
+    bottom: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #ebebeb;
+    transform-origin:right ;
+    transform: rotate(-15deg);
+    box-shadow: 100px -34px #ebebeb;
+}
+.lightbtn{
+    position: absolute;
+    top: 5px;
+    right: -2px;
+    width: 10px;
+    height: 70px;
+    border-radius: 15px;
+    background: #0002;
+    transform-style: preserve-3d;
+}
+.lightbtn::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 150px;
+    height: 16px;
+    background: linear-gradient(90deg, #fff6, transparent);
+    transform-origin: left;
+    transform: perspective(500px) rotateY(-50deg);
+
+}
+.lightbtn::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 150px;
+    height: 16px;
+    background: linear-gradient(90deg, #fff6, transparent);
+     transform-origin: left;
+    transform: perspective(500px) rotateY(-50deg);
+}
+.police h4{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 10;
+    transform: translateY(-50%) rotate(90deg) scale(0.75);
+    
+
+}
+.police h3{
+    position: absolute;
+    top: 50%;
+    /* left: -2px; */
+    right: -2%;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 10;
+    transform: translateY(-50%) rotate(270deg) scale(0.75);
+
+}
+.police .sidemirror{
+    position: absolute;
+    inset: 0;
+
+
+}
+.police .sidemirror::before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 40px;
+    width: 5px;
+    height: 10px;
+    background: #ebebeb;
+    border-top-right-radius: 10px;
+}
+.police .sidemirror::after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 40px;
+    width: 5px;
+    height: 10px;
+    background: #ebebeb;
+    border-bottom-right-radius: 50px;
+}
+.police2{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: -100px;
+    background: #3f4c54;
+    border-radius: 10px;
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    perspective: 800px;
+    z-index: 10;
+    animation: policecar1 5s linear infinite;
+}
+@keyframes policecar1{
+    0%{
+        transform: translateX(20px) translateY(-50px);
+    }
+    25%{
+        transform: translateX(-10px) translateY(0px);
+    }
+    50%{
+        transform: translateX(20px) translateY(50px);
+    }
+    75%{
+        transform: translateX(-10px) translateY(0);
+    }
+    100%{
+        transform: translateX(20px) translateY(-50px);
+    }
+}
+.police2::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 2px;
+    height: 15px;
+    border-radius: 2px;
+    background: #fc325f;
+    box-shadow: 0 42px #fc325f;
+}
+.police2::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    /* left: 2px; */
+    right: 2px;
+    width: 2px;
+    height: 16px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 44px #fff;   
+}
+.police2 span{
+    position: absolute;
+    background: #475b66;
+    border-radius: 10px;
+    inset: 5px 10px;
+    overflow: hidden;
+
+}
+.police2 span::before{
+    content: "911";
+    top: 50%;
+    position: absolute;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    color: #333;
+    font-size: 17.92px;
+    font-weight: 1000;
+    letter-spacing: 1.6px;
+    z-index: 10;
+}
+.police2 span::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 6px;
+    height: 10px;
+    background: #29282b;
+    box-shadow: 0px -10px #1f5ff1, 0px 10px #df1b25;
+    /* color: ; */
+}
+.police2 span b{
+    position: absolute;
+    inset: 0 30px;
+    background: #344650;
+    border-radius: 10px;
+}
+.police2 span b::before{
+   content: "";
+   position: absolute;
+   inset: 6px 25px;
+   background: #ebebeb; 
+}
+.police2 span b::after{
+    inset: 0px 58px;
+    content: "";
+   position: absolute;
+    background: #ebebeb;
+}
+.police2 span i{
+    inset: 0;
+    position: absolute;
+
+}
+.police2 span i::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #ebebeb;
+    transform-origin:right ;
+    transform: rotate(15deg);
+    box-shadow: 100px 34px #ebebeb;
+}
+.police2 span i::after{
+    content: "";
+    position: absolute;
+    /* top: 7px; */
+    bottom: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #ebebeb;
+    transform-origin:right ;
+    transform: rotate(-15deg);
+    box-shadow: 100px -34px #ebebeb;
+}
+.police3{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 800px;
+    background: #c3ec09;
+    border-radius: 10px;
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.5);
+    transform-style: preserve-3d;
+    perspective: 800px;
+    z-index: 10;
+    animation: policecar2 5s linear infinite;
+}
+@keyframes policecar2{
+    0%{
+        transform: translateX(20px) translateY(-50px);
+    }
+    25%{
+        transform: translateX(-10px) translateY(0px);
+    }
+    50%{
+        transform: translateX(20px) translateY(50px);
+    }
+    75%{
+        transform: translateX(-10px) translateY(0);
+    }
+    100%{
+        transform: translateX(20px) translateY(-50px);
+    }
+}
+.police3::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 2px;
+    height: 15px;
+    border-radius: 2px;
+    background: #fc325f;
+    box-shadow: 0 42px #fc325f;
+}
+.police3::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    /* left: 2px; */
+    right: 2px;
+    width: 2px;
+    height: 16px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 44px #fff;   
+}
+.police3 span{
+    position: absolute;
+    background: #475b66;
+    border-radius: 10px;
+    inset: 5px 10px;
+    overflow: hidden;
+
+}
+.police3 span::before{
+    content: "Taxi";
+    top: 50%;
+    position: absolute;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    color: #333;
+    font-size: 17.92px;
+    font-weight: 1000;
+    letter-spacing: 1.6px;
+    z-index: 10;
+}
+.police3 span::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 6px;
+    height: 10px;
+    /* background: #29282b; */
+    /* box-shadow: 0px -10px black, 0px 10px black; */
+    /* color: ; */
+}
+.police3 span b{
+    position: absolute;
+    inset: 0 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+.police3 span b::before{
+   content: "";
+   position: absolute;
+   inset: 6px 25px;
+   background: #dbeb05; 
+}
+.police3 span b::after{
+    inset: 0px 58px;
+    content: "";
+   position: absolute;
+    background: #dbeb05;
+}
+.police3 span i{
+    inset: 0;
+    position: absolute;
+
+}
+.police3 span i::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #dbeb05;
+    transform-origin:right ;
+    transform: rotate(15deg);
+    box-shadow: 100px 34px #dbeb05;
+}
+.police3 span i::after{
+    content: "";
+    position: absolute;
+    /* top: 7px; */
+    bottom: 7px;
+    left: 20px;
+    width: 40px;
+    height: 5px;
+    background: #dbeb05;
+    transform-origin:right ;
+    transform: rotate(-15deg);
+    box-shadow: 100px -34px #dbeb05;
+}
