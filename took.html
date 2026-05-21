@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Chris Student Toolkit</title>
+    <link rel="stylesheet" href="took.css">
+</head>
+<body>
+     <header class="header">
+
+    <div class="logo">
+      Chris <span>Art Tech</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <nav id="nav">
+
+      <a href="#home">Home</a>
+
+      <a href="#calculator">Calculator</a>
+
+      <a href="#about">About</a>
+
+    </nav>
+
+  </header>
+
+  
+
+  <section class="hero" id="home">
+
+    <h1>
+      Chris Student Toolkit
+    </h1>
+
+    <p>
+      A modern universal CGPA calculator built for students.
+      Fast, responsive and mobile friendly.
+    </p>
+
+  </section>
+
+  
+
+  <section id="calculator">
+
+    <div class="container">
+
+      <h2>CGPA Calculator</h2>
+
+      <p class="sub">
+        Add your courses and calculate your GPA instantly
+      </p>
+
+      <div id="courses">
+
+        <div class="course-box">
+
+          <input type="text" placeholder="Course Title">
+
+          <input type="number" placeholder="Unit" class="unit">
+
+          <select class="grade">
+
+            <option value="5">A</option>
+            <option value="4">B</option>
+            <option value="3">C</option>
+            <option value="2">D</option>
+            <option value="1">E</option>
+            <option value="0">F</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="btns">
+
+        <button onclick="addCourse()">
+          Add Course
+        </button>
+
+        <button onclick="calculateGPA()">
+          Calculate GPA
+        </button>
+
+      </div>
+
+      <div class="result">
+
+        <p>Your GPA</p>
+
+        <h1 id="gpa">
+          0.00
+        </h1>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  
+
+  <section id="about">
+
+    <div class="container">
+
+      <h2>About This Project</h2>
+
+      <p class="sub">
+        Designed and developed by Chris Art Tech 💻
+      </p>
+
+      <p class="about-text">
+
+        This project helps students calculate GPA easily
+        without stress. Built using HTML, CSS and JavaScript
+        with a responsive modern interface.
+
+      </p>
+
+    </div>
+
+  </section>
+
+  
+
+  <footer>
+
+    © 2026 Chris Art Tech — All Rights Reserved
+
+  </footer>
+
+  
+
+  <button id="backToTop">
+    ↑
+  </button>
+
+
+
+
+
+
+
+
+
+    <script src="took.js"></script>
+</body>
+</html>
